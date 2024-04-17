@@ -20,6 +20,7 @@ Recurrency Baseline for Temporal Knowledge Graph Forecasting
     utils.py
     parser.py
     run_evaluation.py
+    data_handler.py
 
 NEC Laboratories Europe GmbH, Copyright (c) 2024-, All rights reserved.  
 
