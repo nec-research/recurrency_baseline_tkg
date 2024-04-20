@@ -1,6 +1,5 @@
 # TKG Forecasting: Recurrency_Baselines
 
-
 "History repeats itself: A Baseline for Temporal Knowledge Graph Forecasting" 
 Julia Gastinger, Christian Meilicke, Federico Errica, Timo Sztyler, Anett Schuelke, Heiner Stuckenschmidt
 
@@ -27,9 +26,14 @@ Install all packages from requirements.txt
 
 ## How to cite
 
-"History repeats itself: A Baseline for Temporal Knowledge Graph Forecasting" 
-Julia Gastinger, Christian Meilicke, Federico Errica, Timo Sztyler, Anett Schuelke, Heiner Stuckenschmidt
-
-ICJAI 2024
+```
+@inproceedings{gastinger2024baselines,
+  title={History repeats itself: A Baseline for Temporal Knowledge Graph Forecasting},
+  author={Gastinger, Julia and Meilicke, Christian and Errica, Federico and Sztyler, Timo and Schuelke, Anett and Stuckenschmidt, Heiner},
+  booktitle={33nd International Joint Conference on Artificial Intelligence (IJCAI 2024)},
+  year={2024},
+  organization={International Joint Conferences on Artificial Intelligence Organization}
+}
+```
 
 ## 
