@@ -190,7 +190,7 @@ with open('mrr_check.txt', 'a') as f:
     f.write(str(mrr))
     f.write('\n')
 
-# plot figures on the alpha/lmbda occurence
+# plot figures on the alpha/lmbda occurrence
 oc_dict = {}
 all_rels = test_data[:,1]
 for rel in rels:
