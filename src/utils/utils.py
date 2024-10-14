@@ -270,15 +270,17 @@ def filter_score(test_triples, score, all_ans):
 def sort_and_rank(score, target): # in case of ties: random rank selection
     # taken or modified from https://github.com/Lee-zix/RE-GCN
     score = score*np.max([10000, 10000*score.max()])
-    random_values = torch.rand_like(score)
-    score = score + random_values   # to add some randomness in case of ties. the random values are significantly 
+    # random_values = torch.rand_like(score)
+    # score = score + random_values   # to add some randomness in case of ties. the random values are significantly 
                                     # smaller to ensure that we only permute for ties
+                                    # update: do not add random values, because we want to have stable results and the random values might be too large and affect the ranking
     _, indices = torch.sort(score, dim=1, descending=True) # with default: stable=False; pytorch docu: 
             #"If stable is True then the sorting routine becomes stable, preserving the order of equivalent elements."
     target = torch.tensor(target)
     indices = torch.nonzero(indices == target.view(-1, 1), as_tuple=False)
     indices = indices[:, 1].view(-1)
     return indices
+
 
 
 def stat_ranks(rank_list, method, mode, mrr_snapshot_list):

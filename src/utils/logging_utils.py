@@ -42,7 +42,7 @@ def create_scores_tensor(predictions_dict, num_nodes, device=None):
 
     :returns: predictions  tensor with predicted scores, one per node; e.g. tensor([ 5.3042,  6....='cuda:0') torch.Size([23033])
     """
-    predictions = torch.zeros(num_nodes, device=device)
-    predictions.scatter_(0, torch.tensor(list(predictions_dict.keys())).long(), torch.tensor(list(predictions_dict.values())).float())
+    predictions = torch.zeros(num_nodes, device=device, dtype=torch.float64)
+    predictions.scatter_(0, torch.tensor(list(predictions_dict.keys())).long(), torch.tensor(list(predictions_dict.values()), dtype=torch.float64))
     return predictions
 
