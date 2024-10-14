@@ -262,8 +262,8 @@ def filter_score_r(test_triples, score, all_ans):
 
 def sort_and_rank(score, target): # in case of ties: random rank selection
     score = score*np.max([10000, 10000*score.max()])
-    random_values = torch.rand_like(score)
-    score = score + random_values   # to add some randomness in case of ties. the random values are significantly 
+    # random_values = torch.rand_like(score)
+    # score = score + random_values   # to add some randomness in case of ties. the random values are significantly 
                                     # smaller to ensure that we only permute for ties
     _, indices = torch.sort(score, dim=1, descending=True) # with default: stable=False; pytorch docu: 
             #"If stable is True then the sorting routine becomes stable, preserving the order of equivalent elements."
