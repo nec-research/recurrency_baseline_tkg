@@ -132,6 +132,8 @@ def apply_baselines(i, num_queries, test_data, all_data, window, basis_dict, sco
         predictions_psi=torch.zeros(num_nodes)
 
         for j in test_queries_idx:       
+            predictions_xi=torch.zeros(num_nodes) 
+            predictions_psi=torch.zeros(num_nodes)
             test_query = test_data[j]
             cands_dict = dict() 
             cands_dict_psi = dict() 
